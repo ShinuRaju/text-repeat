@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body >
+
+    <h1 class="text-center display-4 mb-5">Text Repeat</h1>
+<p class="text-center w-75 mx-auto">World's simplest browser-based utility for repeating text. Load your text in the input form on the left and you'll automatically get multiple copies of this text on the right. Powerful, free, and fast. Load text – repeat text.</p>
+    
+.<div class="container-fluid px-4 mb-4">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 mb-3">
+            <div class="form-group mb-3">
+                <label for="inputText" class="mb-3">Input Text </label>
+                <textarea id="inputText" class="form-control vh-50" name="" rows="3"></textarea>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col">
+                  <button class="btn btn-primary" id="copy-button" data-clipboard-target="#inputText" >copy to clipboard</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="form-group mb-3">
+                <label for="repeatedText" class="mb-3">Repeated Text </label>
+                <textarea id="repeatedText" style="height:100%;" class="form-control vh-50" name="" rows="3"></textarea>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col">
+                    <button class="btn btn-primary" id="copy-button" data-clipboard-target="#repeatedText" >copy to clipboard</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-start">
+        
+        <div class="col-sm-6">
+            <div class="mb-1 d-inline">
+                <label for="repeatTimes" class="form-label">Times to repeat</label>
+                <input type="number" class="form-control" id="repeatTimes" value=2 >
+              </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-1 d-inline">
+                <label for="delimiter" class="form-label">Delimiter</label>
+                <input type="text" class="form-control" id="delimiter" value = ',' >
+              </div>
+        </div>
+      
+    </div>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <script>
+      (function(){
+    new Clipboard('#copy-button');
+})();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
